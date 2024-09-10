@@ -41,6 +41,18 @@ export function UserModalContent(props: Props) {
           )}
         </Grid.Col>
         <Grid.Col span={4}>
+          <Text c="dimmed">緊急連絡先</Text>
+        </Grid.Col>
+        <Grid.Col span={8}>
+          {isLoading ? (
+            <Skeleton>
+              <Text>読み込み中</Text>
+            </Skeleton>
+          ) : (
+            <Text>{user.emergency}</Text>
+          )}
+        </Grid.Col>
+        <Grid.Col span={4}>
           <Text c="dimmed">コメント</Text>
         </Grid.Col>
         <Grid.Col span={8}>
