@@ -40,6 +40,18 @@ export function UserModalContent(props: Props) {
             <Text>{user.email}</Text>
           )}
         </Grid.Col>
+        <Grid.Col span={4}>
+          <Text c="dimmed">コメント</Text>
+        </Grid.Col>
+        <Grid.Col span={8}>
+          {isLoading ? (
+            <Skeleton>
+              <Text>読み込み中</Text>
+            </Skeleton>
+          ) : (
+            <Text style={{whiteSpace : "pre-wrap"}}>{user.comment}</Text>
+          )}
+        </Grid.Col>
       </Grid>
     </>
   );
