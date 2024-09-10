@@ -16,6 +16,7 @@ export const UserUpdateCommentSchema = UserSchema.omit({
   name: true,
   email: true,
   extension: true,
+  emergency: true
 });
 
 export const DivisionSchema = z.object({

@@ -41,7 +41,6 @@ model UserStatus {
   userId         String
   statusId       String
   createdAt      DateTime @default(now())
-  emergency      String?
 }
 
 model Status {
