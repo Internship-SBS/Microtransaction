@@ -34,6 +34,9 @@ export const getUsersByDivision = publicProcedure
           },
         },
       },
+      orderBy: {
+        extension: "desc",
+      }
     });
     return users.map((user) => ({
       ...user,
